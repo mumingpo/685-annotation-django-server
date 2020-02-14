@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Data</title>
+</head>
+<body>
+<table>
+<tr>
+<th>Tweet</th>
+{% for annotator in annotators %}
+	<th> {{ annotator }} </th>
+{% endfor %}
+</tr>
+{% for row in rows %}
+	<tr>
+	{% for field in row %}
+		<td>{{ field }}</td>
+	{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+<form action="download" method="get">
+<button type="submit">Download</button>
+</form>
+</body>
+</html>

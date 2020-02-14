@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Annotation Page</title>
+</head>
+<body>
+<h2>Annotate Tweet #{{ tweet_id }}:</h2>
+<p>{{ tweet }}</p>
+<form action="" method="post">
+{% csrf_token %}
+<input type="radio" name="sentiment" value="0" style="display:none" checked>
+<input type="radio" name="sentiment" value="1">Positive sentiment<br \>
+<input type="radio" name="sentiment" value="2">Negative sentiment<br \>
+<input type="radio" name="sentiment" value="3">Unintelligible tweet (not merely because it's ambiguous)<br \>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
